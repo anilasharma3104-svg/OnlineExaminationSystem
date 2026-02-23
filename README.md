@@ -1,36 +1,81 @@
-# Online Examination Platform
+# SHHSS Online Examination Platform
 
-This is a **Python-based online examination system** for students, teachers, and management.  
-It allows:
+This is a Python-based online examination system using MySQL database.
 
-- **Students** to take exams and see scores.
-- **Teachers** to create questions for exams.
-- **Management** to add new students or teachers.
+It supports:
+- Student login and exam attempt
+- Teacher question creation
+- Management record handling
 
----
+-----------------------------------
+
+## Technologies Used
+
+- Python 3
+- MySQL
+- mysql-connector-python
+
+-----------------------------------
+
+## Installation Steps
+
+1. Clone the repository
+
+git clone https://github.com/anilasharma3104-svg/OnlineExaminationSystem.git
+
+2. Install required package
+
+pip install -r requirements.txt
+
+3. Create MySQL database
+
+Run the following in MySQL:
+
+CREATE DATABASE MANAGEMENT;
+
+CREATE TABLE students (
+    ADM_NO INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    CLASS INT,
+    SECTION VARCHAR(5),
+    AGE INT
+);
+
+CREATE TABLE teachers (
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    SUBJECT VARCHAR(50),
+    AGE INT
+);
+
+CREATE TABLE management (
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    AGE INT
+);
+
+-----------------------------------
+
+## How to Run
+
+python exam.py
+
+-----------------------------------
 
 ## Features
 
-1. **Student Mode**
-   - Take exams based on class and subject.
-   - Get immediate scores after submitting answers.
+✔ Student can attempt exam  
+✔ Teacher can create exam questions  
+✔ Management can add new members  
+✔ Automatic score calculation  
 
-2. **Teacher Mode**
-   - Add questions and multiple-choice options for a class and subject.
-   - Define correct answers for automatic scoring.
+-----------------------------------
 
-3. **Management Mode**
-   - Add new students or teachers to the system.
+## Future Improvements
 
----
+- Convert to GUI application
+- Deploy online version
 
-## Requirements
+-----------------------------------
 
-- Python 3.x
-- MySQL server
-- `mysql-connector-python` module
-
-Install the module using:
-
-```bash
-pip install mysql-connector-python
+Author: Anila Sharma
